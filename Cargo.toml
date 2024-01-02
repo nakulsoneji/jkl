@@ -1,0 +1,13 @@
+[package]
+name = "jkl"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.77"
+clap = { version = "4.4.12", features = ["derive"] }
+curl = "0.4.44"
+sqlx = { version = "0.7", features = [ "runtime-tokio", "sqlite" ] }
+tokio = { version = "1.35.1", features = ["rt", "macros", "rt-multi-thread"] }
