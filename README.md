@@ -16,26 +16,25 @@ git clone https://github.com/nakulsoneji/jkl.git
 cd jkl && cargo build --release
 ```
 3. Add the `jkl` exe in target/release/ to PATH (your browser is your friend if you dont understand te steps below)
-Linux:
-simply move the exe to /usr/bin or .local/bin
+Linux: <br>
+simply move the exe to /usr/bin or .local/bin <br>
 .local/bin is usually not on PATH by default, so make sure to add it to PATH 
 ```sh
 sudo mv target/release/jkl /usr/bin
 ```
-note: sudo is not needed if you are moving to .local/bin
+note: sudo is not needed if you are moving to .local/bin<br>
 
-Mac:
+Mac:<br>
 I believe that something similar to the above can be done on Mac, but I do not have a Mac machine to test this
 
-Windows:
+Windows:<br>
 Add it to whatever directory you please and add the exe to PATH
 4. run `jkl init` to generate the needed directories
 
 ## To use:
 ### Installing:
 jkl is a source-based package manager, so you will need to write your own build scripts. The rest of this section will use the installation of `bun`, a popular js runtime, package manager, and much more as an example.
-To start off, create a folder in the ~/.jkl/repo directory with the folowing format: <BIN_NAME>-<BIN_VERSION>
-BIN_NAME MUST be the name of the binary you install. 
+To start off, create a folder in the ~/.jkl/repo directory with the folowing format: <BIN_NAME>-<BIN_VERSION>. BIN_NAME MUST be the name of the binary you install. <br>
 Inside of that folder, create a file called `build.sh`
 
 ex.
@@ -46,7 +45,7 @@ cd bun-1.0.20
 touch build.sh
 ```
 
-Next, modify build.sh to install your package. The following env variables are exported for you:
+Next, modify build.sh to install your package. The following env variables are exported for you:<br>
 
 BUILD_DIR - this is the directory your script will be executed in (~/.jkl/build) <br>
 BIN_DIR - move your installed executable to this directory at the end (THIS IS REQUIRED, ~/.jkl/bin) <br>
@@ -68,16 +67,14 @@ unzip "${PKG_ARCHIVE}.zip"
 mv "${PKG_ARCHIVE}/${P}" $BIN_DIR
 rm -rf ${BUILD_DIR}/*
 ```
-note: this technically just installs a binary and does not build it from source, but building it from source would still work with the package manager
-Notice how I am using the environment variables for the github source code link. This will make updates much easier later.
-Now, install with `jkl install <BIN_NAME>`
-The script will automatically terminate if there is an error
+note: this technically just installs a binary and does not build it from source, but building it from source would still work with the package manager<br>
+Notice how I am using the environment variables for the github source code link. This will make updates much easier later.<br>
+Now, install with `jkl install <BIN_NAME>`. The script will automatically terminate if there is an error. <br>
 note: if you use `wget`, make sure you run it with 2>&1 or -q, as `wget` logs all output to stderr. This will trigger `jkl` to stop running and output an error.
 
 ### Updating:
-This package manager does not rely on community maintained repos like `apt`, `pacman`, or `choco`
-To update, change the folder version and run `jkl update <BIN_NAME>`
-note: changing the folder verison will only work if you used the env vars for the version, and if build instructions haven't changed since the last release of the package. If so, then you willhave to make those changes manually.
+This package manager does not rely on community maintained repos like `apt`, `pacman`, or `choco`. To update, change the folder version and run `jkl update <BIN_NAME>`<br>
+note: changing the folder verison will only work if you used the env vars for the version, and if build instructions haven't changed since the last release of the package. If so, then you willhave to make those changes manually.<br>
 
 ex. 
 If bun updated from 1.0.20 to 1.0.21, I would run the following commands:
@@ -90,8 +87,8 @@ jkl update bun
 Run `jkl delete <BIN_NAME>`. This will delete it from the database and delete the binary, but will not delete the repo folder. This is for easier reinstall, and you can simply just run `jkl install <BIN_NAME>`. Also, you can just manually delete the repo folder if you want with `rm -r`. Support for the `jkl` to do this is coming soon!
 
 ### List:
-Run `jkl list` to list all installed binaries and version with a count of installed packages.
-sample output:
+Run `jkl list` to list all installed binaries and version with a count of installed packages.<br>
+sample output:<br>
 ![jkl list example](https://github.com/nakulsoneji/jkl/assets/98666847/86280aa8-1e39-443d-9068-48b727fb2391)
 
 
