@@ -4,7 +4,7 @@ this program is similar to portage, gentoo linux's package maanger, but with far
 1. git
 2. cargo
 3. rust
-4. sh (does not have to be your primary shell, just make sure that `sh` is an executable on the PATH)
+4. sh (does not have to be your primary shell, just make sure that `sh` is an executable on the PATH)<br>
 <b>note: this software is untested on Mac or windows, but should theoretically work if you have the "HOME" environment variable set</b>
 ## To install:
 1. Clone the repo
