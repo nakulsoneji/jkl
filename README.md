@@ -17,7 +17,7 @@ cd jkl && cargo build --release
 ```
 3. Add the `jkl` exe in target/release/ to PATH (your browser is your friend if you dont understand the steps below)</br>
 <br>
-#### Linux: <br>
+Linux: <br>
 simply move the exe to /usr/bin or .local/bin <br>
 .local/bin is usually not on PATH by default, so make sure to add it to PATH 
 ```sh
@@ -25,10 +25,10 @@ sudo mv target/release/jkl /usr/bin
 ```
 note: sudo is not needed if you are moving to .local/bin<br>
 <br>
-#### Mac:<br>
-I believe that something similar to the above can be done on Mac, but I do not have a Mac machine to test this  
 <br>
-#### Windows:<br>
+I believe that something similar to the above can be done on Mac, but I do not have a Mac machine to test this  
+
+<br>Windows:<br>
 Add it to whatever directory you please and add the exe to PATH
 4. run `jkl init` to generate the needed directories
 
