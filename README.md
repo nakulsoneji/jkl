@@ -15,7 +15,8 @@ git clone https://github.com/nakulsoneji/jkl.git
 ```sh
 cd jkl && cargo build --release
 ```
-3. Add the `jkl` exe in target/release/ to PATH (your browser is your friend if you dont understand te steps below)<br>
+3. Add the `jkl` exe in target/release/ to PATH (your browser is your friend if you dont understand the steps below)<br>
+<br>
 Linux: <br>
 simply move the exe to /usr/bin or .local/bin <br>
 .local/bin is usually not on PATH by default, so make sure to add it to PATH 
