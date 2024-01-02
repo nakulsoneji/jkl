@@ -48,12 +48,12 @@ touch build.sh
 
 Next, modify build.sh to install your package. The following env variables are exported for you:
 
-BUILD_DIR - this is the directory your script will be executed in (~/.jkl/build)
-BIN_DIR - move your installed executable to this directory at the end (THIS IS REQUIRED, ~/.jkl/bin)
-SCRIPTS_DIR - this is exported so that you use any custom scripts stored in ~/.jkl/scripts
-V - the version (taken from folder name)
-P - the binary name (taken from folder name)
-PV - the binary and version formatted like <binary>-version> (this is the same as the folder name)
+BUILD_DIR - this is the directory your script will be executed in (~/.jkl/build) <br>
+BIN_DIR - move your installed executable to this directory at the end (THIS IS REQUIRED, ~/.jkl/bin) <br>
+SCRIPTS_DIR - this is exported so that you use any custom scripts stored in ~/.jkl/scripts <br>
+V - the version (taken from folder name) <br>
+P - the binary name (taken from folder name) <br>
+PV - the binary and version formatted like <binary>-version> (this is the same as the folder name) <br>
 
 ex.
 ```sh
