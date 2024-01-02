@@ -19,7 +19,7 @@ cd jkl && cargo build --release
 <br>
 Linux: <br>
 simply move the exe to /usr/bin or .local/bin <br>
-.local/bin is usually not on PATH by default, so make sure to add it to PATH 
+.local/bin is usually not on PATH by default, so make sure to add it to PATH <br>
 ```sh
 sudo mv target/release/jkl /usr/bin
 ```
