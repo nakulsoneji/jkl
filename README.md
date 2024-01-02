@@ -26,7 +26,7 @@ sudo mv target/release/jkl /usr/bin
 note: sudo is not needed if you are moving to .local/bin<br>
 <br>
 Mac:<br>
-I believe that something similar to the above can be done on Mac, but I do not have a Mac machine to test this
+I believe that something similar to the above can be done on Mac, but I do not have a Mac machine to test this<br>
 
 Windows:<br>
 Add it to whatever directory you please and add the exe to PATH
