@@ -31,6 +31,7 @@ I believe that something similar to the above can be done on Mac, but I do not h
 
 Windows:<br>
 Add it to whatever directory you please and add the exe to PATH.  
+  
 4. run `jkl init` to generate the needed directories
 
 ## To use:
